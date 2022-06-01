@@ -6,10 +6,12 @@ int main() {
 
 	for (i = 0; i < 5; i++) {
 		printf("p = %p, ", p);
-		printf("*p = %d\n", *p++);
+		printf("*p++ = %d, ", *p++);
+		printf("*p = %d\n", (*p)++);
 	}
 	printf(" *p++ = %d\n", *p);
-	printf(" *--p  = %d", *--p);
+	printf(" *--p  = %d\n", *--p);
+	printf(" *p = %d, *--p = %d",(*p)--, *p);
 
 	return 0;
 
